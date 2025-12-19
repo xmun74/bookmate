@@ -1,7 +1,13 @@
+import { HeroSection } from "@/components/home/HeroSection";
+import { FeaturesSection } from "@/components/home/FeaturesSection";
+import { CTASection } from "@/components/home/CTASection";
+
 export default function Home() {
   return (
-    <div>
-      <main className="text-2xl">메인 페이지 입니다.</main>
-    </div>
+    <>
+      <HeroSection />
+      <FeaturesSection />
+      <CTASection />
+    </>
   );
 }

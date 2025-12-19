@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* Tailwind CSS v4 커스텀 설정 */
 @theme {
@@ -30,26 +31,6 @@
   --color-gray-900: #111827;
 }
 
-/* 라이트 모드 (기본) */
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-/* 다크 모드 - class 기반 */
-.dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-}
-
-/* 시스템 설정 기반 다크모드 (폴백) */
-@media (prefers-color-scheme: dark) {
-  :root:not(.light) {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 html,
 body {
   max-width: 100vw;
@@ -57,30 +38,15 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-/* 다크 모드 적용 시 color-scheme 설정 */
-.dark {
-  color-scheme: dark;
-}
-
-@media (prefers-color-scheme: dark) {
-  html:not(.light) {
-    color-scheme: dark;
-  }
 }
