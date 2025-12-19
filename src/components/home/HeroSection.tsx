@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/Button";
+
 export function HeroSection() {
   return (
     <section className="w-full px-6 pt-32 pb-24">
@@ -17,12 +19,10 @@ export function HeroSection() {
         </p>
 
         <div className="flex flex-col gap-3 sm:flex-row">
-          <button className="rounded-lg bg-black px-6 py-3 text-sm font-medium text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-100">
-            무료로 시작하기
-          </button>
-          <button className="rounded-lg border border-gray-200 px-6 py-3 text-sm font-medium hover:bg-gray-50 dark:border-white/10 dark:hover:bg-white/5">
+          <Button size="lg">무료로 시작하기</Button>
+          <Button size="lg" variant="outline">
             자세히 알아보기
-          </button>
+          </Button>
         </div>
 
         {/* Hero Image Placeholder */}

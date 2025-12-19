@@ -2,6 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/Button";
 
 export function ThemeToggleBtn() {
   const { theme, setTheme } = useTheme();
@@ -18,10 +19,10 @@ export function ThemeToggleBtn() {
   }
 
   return (
-    <button
-      type="button"
+    <Button
+      size="icon"
+      variant="outline"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="cursor-pointer rounded-lg border border-gray-200 p-2 transition-colors hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-gray-800"
       aria-label="Toggle theme"
     >
       {theme === "dark" ? (
@@ -55,6 +56,6 @@ export function ThemeToggleBtn() {
           />
         </svg>
       )}
-    </button>
+    </Button>
   );
 }
