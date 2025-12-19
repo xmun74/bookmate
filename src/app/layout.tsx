@@ -16,8 +16,8 @@ const pretendard = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "방가 | 방 구하러 가기",
-  description: "첫 자취 집 마련을 돕는 부동산 실거래가 웹 서비스입니다.",
+  title: "북메이트",
+  description: "함께 책을 읽고 성장하는 경험을 제공하는 소셜 독서 서비스입니다.",
 };
 
 export default function RootLayout({
