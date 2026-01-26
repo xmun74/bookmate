@@ -5,3 +5,5 @@ export { Footer } from "./Footer";
 export { BottomNav } from "./BottomNav";
 export { Modal } from "./Modal";
 export { ProgressBar } from "./ProgressBar";
+export { EditableText } from "./EditableText";
+export { AvatarEditor } from "./AvatarEditor";
