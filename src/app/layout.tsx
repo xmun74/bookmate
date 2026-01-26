@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/layouts/Header";
-import { Footer } from "@/components/layouts/Footer";
-import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { Header, Footer, BottomNav } from "@/shared/ui";
+import { ThemeProvider } from "@/shared/providers";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,14 +29,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" suppressHydrationWarning>
-      <body className={`${inter.variable} ${pretendard.variable} ${pretendard.className}`}>
-        <NextThemesProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <div className="flex min-h-screen flex-col items-center justify-center bg-white dark:bg-black">
+      <body className={`${inter.variable} ${pretendard.variable} ${pretendard.className}`} suppressHydrationWarning>
+        <ThemeProvider>
+          <div className="flex min-h-screen flex-col bg-white dark:bg-black">
             <Header />
-            {children}
+            <main className="flex-1 pb-20 md:pb-0">{children}</main>
             <Footer />
+            <BottomNav />
           </div>
-        </NextThemesProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
