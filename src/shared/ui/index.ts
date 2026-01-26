@@ -3,3 +3,5 @@ export { ThemeToggleBtn } from "./ThemeToggleBtn";
 export { Header } from "./Header";
 export { Footer } from "./Footer";
 export { BottomNav } from "./BottomNav";
+export { Modal } from "./Modal";
+export { ProgressBar } from "./ProgressBar";
