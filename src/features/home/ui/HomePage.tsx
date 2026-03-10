@@ -37,7 +37,7 @@ export function HomePage() {
           <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
             {filteredBooks.map(book => (
               <div key={book.id}>
-                <div className="relative aspect-[2/3] overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+                <div className="relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
                   <div className="flex h-full items-center justify-center text-gray-400 dark:text-gray-500">
                     <svg className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
                       <path
